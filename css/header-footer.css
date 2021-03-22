@@ -1,0 +1,10 @@
+/*styling for header*/
+#header {
+  text-align: center;
+  font-family: 'Concert One', cursive; /*Google font*/
+  font-size: 1.5em;  
+}
+
+.nav-links {
+  color: #CDF;
+}

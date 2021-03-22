@@ -1,3 +1,8 @@
+@import "./header-footer.css"; 
+@import "./blog-cards.css"; 
+@import "./blog-pages.css"; 
+
+
 body {
   background-color: #38E; 
 }
@@ -7,34 +12,38 @@ body {
   display: grid;
   width: 90%;  /*90% of view width*/
   margin: auto; 
-  grid-template-columns: 100%;
+  grid-template-columns: 850px;
   grid-template-rows: 50px 250px 1fr;
   grid-template-areas:
   "info-row"
   "main"
   "coming-soon";
+  justify-content: center;
 }
 
 .box {
   border: 2px red solid; 
 }
 
+/*Styles for nested grid in main content */
 #nested-grid {
   display: grid; 
+  justify-content: center;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 50% 50%;
-  border: 2px red solid; 
+  margin: auto; 
+  border: 1px white solid; 
 }
 
-/*styling for header*/
-#header {
-  text-align: center;
-  font-family: 'Concert One', cursive; /*Google font*/
-  font-size: 1.5em;  
-}
+/* .info-box {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  border: 1px purple solid; 
+  height: 50px; 
+  width: 50px; 
+} */
 
-.nav-links {
-  color: #CDF;
-}
+
 
 /*media query breakpoints*/
