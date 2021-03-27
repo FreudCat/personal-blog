@@ -137,8 +137,36 @@
   #navbar {
     position: fixed; 
     overflow: hidden; 
+    width: 100vw;
+    background-color:rgb(86, 46, 179); 
+    padding: 10px 20px 10px;
+  }
+  #navbar a {
+    display: inline-flex;
+    justify-content: center;
+    padding: 5px;  
+    text-decoration: none;
+    }
+   
+  button {
+    background-color: transparent;
+    border: 2px rgb(218, 212, 212) solid;
+    border-radius: 5px; 
+    margin: 0px 5px; 
+    color: rgb(218, 212, 212); 
+    padding: 8px; 
+  }
+  button:hover {
+    border: 2px solid white; 
+    color:white;
+  }
+  button:active {
+    border: 2px solid rgb(243, 202, 168); 
+    color:rgb(243, 202, 168); 
   }
   
+  
+
   #quote {
     grid-area: quote;
     
@@ -161,13 +189,7 @@
     border: 3px purple solid; 
     
   }
-  #navbar a {
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-  }
+
   #nested {
     display: grid; 
     justify-content: center;
