@@ -2,20 +2,44 @@
 
 /*small windows*/
 @media only screen and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
   #container {
     display: grid; 
-    width: 94vw; 
+    width: 95vw; 
     margin: auto;
-    grid-template-columns: 94vw; /*be sure to split the width equally*/
-    grid-template-rows: 90vh 25vh 25vh 25vh 10vh; 
+    grid-template-columns: 95vw; /*be sure to split the width equally*/
+    grid-template-rows: 100vh 25vh 300vh 10vh; 
     grid-template-areas: 
     "top"
     "quote"
-    "about"
     "nest"
-    "btm"
-    ; 
-    border: 2px red solid; 
+    "btm"; 
+    grid-gap: 50px; 
+  }
+#about {
+  background-color: rgb(36, 36, 36);
+  border-radius: 10px;
+}
+
+.card-img {
+  width: 60vw; 
+  height: 55vh; 
+    box-shadow: 10px 0 15px 0  rgba(0,0,0,0.6);
+    transition: 0.2s; /*this is how fast the shadow grows*/
+}
+
+
+  .center-text {
+    text-align: center;
+    
+  }
+  #quote-card {
+    border-radius: 10px;
+    width: 85%; 
+    padding: 20px; 
+    box-shadow: 5px 10px 8px 10px #d8d5d5;
   }
   #header {
     text-align: center;
@@ -24,7 +48,7 @@
     padding-top: 30vh; 
     grid-area: top; 
     background-image: url("/multimedia/images/books.jpg");
-    min-height: 300px; 
+    min-height: 100px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,12 +58,14 @@
   #header-text { 
     padding: 2px; 
     margin: 0 10px; 
-    background-color: rgba(255, 255, 255, 0.651);
+    background-color: rgba(255, 255, 255, 0.575);
     border-radius: 10px;
   }
 
+  #card-one {
+   border: 3px red solid; 
+  }
   .box {
-    border: 1px black solid; 
     display: flex; 
     justify-content: center; 
   }
@@ -50,6 +76,7 @@
   
   #quote {
     grid-area: quote;
+    
   }
   #about{
     grid-area: about;
@@ -62,8 +89,10 @@
   }
   #nested {
     display: grid; 
-    grid-template-columns: 90vw; 
-    border: 3px purple dashed;
+    grid-template-columns: 95vw; 
+    grid-template-rows: 100vh;
+    grid-gap: 10px; 
+    border: 3px purple solid; 
     
   }
   #navbar a {
@@ -73,12 +102,31 @@
   padding: 14px;
   text-decoration: none;
   }
+
   
+  .text-center {
+    text-align: center;
+  }
   .nestedbox {
+    display: grid; 
+    grid-template-columns: 60vw; 
+    grid-template-rows: 55vh 30vh;
+    grid-template-areas: 
+    "image"
+    "info";
+    justify-content: center; 
+
+  }
+  .cardbox {
     display: flex;
     justify-content: center;
     margin: 10px; 
     border: 2px green solid; 
+    
+  }
+
+  #info-one {
+    box-shadow: 10px 0 15px 0  rgba(0,0,0,0.6);
   }
 
   #parallax1 {
@@ -104,8 +152,7 @@
   "bottomLeft bottomRight"
   "nest nest"
   "btm btm"
-  ; 
-  border: 1px red solid; 
+  ;  
   justify-content: center;
 }
 
@@ -150,6 +197,11 @@ text-decoration: none;
 }
 
 .nestedbox {
+  display: grid; 
+  grid-template-columns: 30vw 30vw 30vw; 
+  border: 3px purple dashed;
+}
+.cardbox {
   display: flex;
   justify-content: center;
   margin: 10px; 
