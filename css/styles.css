@@ -84,7 +84,38 @@
     transition: 0.2s; /*this is how fast the shadow grows*/
     text-align: center;
   }
+  #card1:hover {
+    box-shadow: 8px 1px 30px #757474;
+  }
   #img1 {
+    width: 100%; 
+    height: 60%;
+  }
+  #card2 {
+    border: 2px blue solid; 
+    grid-area: middle; 
+    box-shadow: 5px 10px 20px #888888;
+    transition: 0.2s; /*this is how fast the shadow grows*/
+    text-align: center;
+  }
+  #card2:hover {
+    box-shadow: 8px 10px 30px #757474;
+  }
+  #img2 {
+    width: 100%; 
+    height: 60%;
+  }
+  #card3 {
+    border: 2px blue solid; 
+    grid-area: bottom; 
+    box-shadow: 5px 10px 20px #888888;
+    transition: 0.2s; /*this is how fast the shadow grows*/
+    text-align: center;
+  }
+  #card3:hover {
+    box-shadow: 8px 10px 30px #757474;
+  }
+  #img3 {
     width: 100%; 
     height: 60%;
   }
