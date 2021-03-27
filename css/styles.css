@@ -17,18 +17,14 @@
     "nest"
     "btm"; 
     grid-gap: 50px; 
+    justify-content: center;
   }
 #about {
   background-color: rgb(36, 36, 36);
   border-radius: 10px;
 }
 
-.card-img {
-  width: 60vw; 
-  height: 55vh; 
-    box-shadow: 10px 0 15px 0  rgba(0,0,0,0.6);
-    transition: 0.2s; /*this is how fast the shadow grows*/
-}
+
 
 
   .center-text {
@@ -62,8 +58,35 @@
     border-radius: 10px;
   }
 
-  #card-one {
-   border: 3px red solid; 
+  #cards {
+    grid-area: nest; 
+    border: 2px green solid; 
+    display: grid; 
+    margin: auto; 
+    width: 90%; 
+    height: 100%;
+    justify-content: center;
+    grid-template-columns: 80%;
+    grid-template-rows: 30% 30% 30%;
+    grid-gap: 30px; 
+    padding: 10px; 
+    grid-template-areas:
+    "top"
+    "middle"
+    "bottom";
+   
+  }
+
+  #card1 {
+    border: 2px blue solid; 
+    grid-area: top; 
+    box-shadow: 5px 10px 20px #888888;
+    transition: 0.2s; /*this is how fast the shadow grows*/
+    text-align: center;
+  }
+  #img1 {
+    width: 100%; 
+    height: 60%;
   }
   .box {
     display: flex; 
@@ -102,32 +125,15 @@
   padding: 14px;
   text-decoration: none;
   }
+  #nested {
+    display: grid; 
+    justify-content: center;
+    border: 1px purple solid; 
+  }
+  
+
 
   
-  .text-center {
-    text-align: center;
-  }
-  .nestedbox {
-    display: grid; 
-    grid-template-columns: 60vw; 
-    grid-template-rows: 55vh 30vh;
-    grid-template-areas: 
-    "image"
-    "info";
-    justify-content: center; 
-
-  }
-  .cardbox {
-    display: flex;
-    justify-content: center;
-    margin: 10px; 
-    border: 2px green solid; 
-    
-  }
-
-  #info-one {
-    box-shadow: 10px 0 15px 0  rgba(0,0,0,0.6);
-  }
 
   #parallax1 {
     background-image: url("/multimedia/images/books.jpg");
