@@ -9,8 +9,8 @@
     display: grid; 
     width: 95vw; 
     margin: auto;
-    grid-template-columns: 95vw; /*be sure to split the width equally*/
-    grid-template-rows: 100vh 25vh 300vh 10vh; 
+    grid-template-columns: 90vw; /*be sure to split the width equally*/
+    grid-template-rows: 100vh 25vh 300vh 30vh; 
     grid-template-areas: 
     "top"
     "quote"
@@ -50,6 +50,13 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .ftr-icon-pad {
+    padding: 0 10px 30px 10px;
+    color: lightseagreen;  
+  }
+  .ftr-icon-pad:hover {
+    color: coral; 
+  }
 
   #header-text { 
     padding: 2px; 
@@ -60,7 +67,6 @@
 
   #cards {
     grid-area: nest; 
-    border: 2px green solid; 
     display: grid; 
     margin: auto; 
     width: 90%; 
@@ -74,15 +80,15 @@
     "top"
     "middle"
     "bottom";
-   
   }
 
   #card1 {
-    border: 2px blue solid; 
     grid-area: top; 
     box-shadow: 5px 10px 20px #888888;
     transition: 0.2s; /*this is how fast the shadow grows*/
     text-align: center;
+    border-radius: 5px; 
+    border-radius: 5px;
   }
   #card1:hover {
     box-shadow: 8px 1px 30px #757474;
@@ -90,13 +96,15 @@
   #img1 {
     width: 100%; 
     height: 60%;
+    border-radius: 5px 5px 0 0 ; 
+
   }
   #card2 {
-    border: 2px blue solid; 
     grid-area: middle; 
     box-shadow: 5px 10px 20px #888888;
     transition: 0.2s; /*this is how fast the shadow grows*/
     text-align: center;
+    border-radius: 5px;
   }
   #card2:hover {
     box-shadow: 8px 10px 30px #757474;
@@ -104,13 +112,14 @@
   #img2 {
     width: 100%; 
     height: 60%;
+    border-radius: 5px 5px 0 0 ; 
   }
   #card3 {
-    border: 2px blue solid; 
     grid-area: bottom; 
     box-shadow: 5px 10px 20px #888888;
     transition: 0.2s; /*this is how fast the shadow grows*/
     text-align: center;
+    border-radius: 5px;
   }
   #card3:hover {
     box-shadow: 8px 10px 30px #757474;
@@ -118,10 +127,12 @@
   #img3 {
     width: 100%; 
     height: 60%;
+    border-radius: 5px 5px 0 0 ; 
   }
   .box {
     display: flex; 
-    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
   }
   #navbar {
     position: fixed; 
@@ -140,6 +151,7 @@
   }
   #footer {
     grid-area: btm;
+    border-top: 2px lightskyblue dotted; 
   }
   #nested {
     display: grid; 
@@ -196,7 +208,8 @@
 .box {
   border: 1px black solid; 
   display: flex; 
-  justify-content: center; 
+  flex-direction: column;
+  justify-content: center;
 }
 #navbar {
   position: fixed; 
@@ -218,6 +231,7 @@
 }
 #five {
   grid-area: btm;
+  
 }
 #nested {
   display: grid; 
