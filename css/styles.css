@@ -19,6 +19,15 @@
     grid-gap: 50px; 
     justify-content: center;
   }
+  #quote {
+    grid-area: quote;
+  }
+  #quote-card {
+    border-radius: 10px;
+    width: 85%; 
+    padding: 20px; 
+    box-shadow: 5px 10px 8px 10px #d8d5d5;
+  }
 #about {
   background-color: rgb(36, 36, 36);
   border-radius: 10px;
@@ -29,14 +38,8 @@
 
   .center-text {
     text-align: center;
-    
   }
-  #quote-card {
-    border-radius: 10px;
-    width: 85%; 
-    padding: 20px; 
-    box-shadow: 5px 10px 8px 10px #d8d5d5;
-  }
+ 
   #header {
     text-align: center;
     font-family: 'Bangers', cursive; /*Google font*/
@@ -177,10 +180,7 @@
   
   
 
-  #quote {
-    grid-area: quote;
-    
-  }
+ 
   #about{
     grid-area: about;
   }
@@ -216,11 +216,11 @@
   width: 90vw;
   margin: auto;
   grid-template-columns: 60vw 30vw; /*be sure to split the width equally*/
-  grid-template-rows: 100vh 45vh 100vh 45vh; 
+  grid-template-rows: 100vh 100vh 60vh 45vh; 
   grid-template-areas: 
   "hdr hdr"
-  "quote-left about-right"
   "card card"
+  "quote-left show-right"
   "ftr ftr"
   ;  
   justify-content: center;
@@ -245,23 +245,36 @@
   background-color: rgba(255, 255, 255, 0.575);
   border-radius: 10px;
 }
+#quote {
+  grid-area: quote-left;
+}
+#quote-card {
+  border-radius: 10px;
+  width: 85%; 
+  padding: 20px; 
+  box-shadow: 5px 10px 8px 10px #d8d5d5;
+  margin: 100px; 
+}
+#show {
+  grid-area: show-right; 
+  margin: 100px; 
+  border-left: 1px lightseagreen dashed; 
+}
+.center-text {
+  text-align: center;
+}
+
 .box {
-  border: 1px black solid; 
   display: flex; 
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
 }
 #navbar {
   position: fixed; 
   overflow: hidden; 
 }
 
-#nested {
-  display: grid; 
-  grid-template-columns: 30vw 30vw 30vw; 
-  border: 3px purple dashed;
-  
-}
+
 #navbar a {
 float: left;
 display: block;
@@ -270,7 +283,22 @@ padding: 14px;
 text-decoration: none;
 }
 
-
+#cards {
+  grid-area: card; 
+  display: grid;
+  justify-content: center;
+  grid-gap: 20px; 
+  grid-template-columns: 30vw 30vw 30vw; 
+  grid-template-rows: 75vh;
+  margin-top: 100px; 
+}
+#card1 { 
+  box-shadow: 5px 10px 20px #888888;
+  transition: 0.2s; /*this is how fast the shadow grows*/
+  text-align: center;
+  border-radius: 5px; 
+  padding: 5px;
+}
 #card1:hover {
   box-shadow: 8px 1px 30px #757474;
 }
@@ -281,7 +309,6 @@ text-decoration: none;
 
 }
 #card2 {
-  grid-area: middle; 
   box-shadow: 5px 10px 20px #888888;
   transition: 0.2s; /*this is how fast the shadow grows*/
   text-align: center;
@@ -298,7 +325,6 @@ text-decoration: none;
   border-radius: 5px 5px 0 0 ; 
 }
 #card3 {
-  grid-area: bottom; 
   box-shadow: 5px 10px 20px #888888;
   transition: 0.2s; /*this is how fast the shadow grows*/
   text-align: center;
@@ -313,5 +339,20 @@ text-decoration: none;
   width: 100%; 
   height: 60%;
   border-radius: 5px 5px 0 0 ; 
+}
+.flex-card {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  height: 80vh; 
+}
+.card-header{
+  font-family: 'Mukta', sans-serif;
+}
+.card-body {
+  font-family: 'Montserrat', sans-serif; 
+}
+.hidden {
+  display: none;
 }
 }
