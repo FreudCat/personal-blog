@@ -1,4 +1,10 @@
 
+/*font styles
+font-family: 'Bangers', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Mukta', sans-serif;
+*/
+
 
 /*small windows*/
 @media only screen and (max-width: 600px) {
@@ -10,7 +16,7 @@
     width: 95vw; 
     margin: auto;
     grid-template-columns: 90vw; /*be sure to split the width equally*/
-    grid-template-rows: 100vh 25vh 300vh 30vh; 
+    grid-template-rows: 100vh 25vh 300vh 35vh; 
     grid-template-areas: 
     "top"
     "quote"
@@ -39,8 +45,8 @@
   }
   #header {
     text-align: center;
-    font-family: 'Concert One', cursive; /*Google font*/
-    font-size: 1.2em; 
+    font-family: 'Bangers', cursive; /*Google font*/
+    font-size: 1.6em; 
     padding-top: 30vh; 
     grid-area: top; 
     background-image: url("/multimedia/images/books.jpg");
@@ -72,8 +78,8 @@
     width: 90%; 
     height: 100%;
     justify-content: center;
-    grid-template-columns: 80%;
-    grid-template-rows: 30% 30% 30%;
+    grid-template-columns: 95%;
+    grid-template-rows: 31% 31% 31%;
     grid-gap: 30px; 
     padding: 10px; 
     grid-template-areas:
@@ -81,7 +87,12 @@
     "middle"
     "bottom";
   }
-
+.card-header{
+  font-family: 'Mukta', sans-serif;
+}
+.card-body {
+  font-family: 'Montserrat', sans-serif; 
+}
   #card1 {
     grid-area: top; 
     box-shadow: 5px 10px 20px #888888;
@@ -89,6 +100,7 @@
     text-align: center;
     border-radius: 5px; 
     border-radius: 5px;
+    padding: 5px;
   }
   #card1:hover {
     box-shadow: 8px 1px 30px #757474;
@@ -105,6 +117,8 @@
     transition: 0.2s; /*this is how fast the shadow grows*/
     text-align: center;
     border-radius: 5px;
+    padding: 5px;
+
   }
   #card2:hover {
     box-shadow: 8px 10px 30px #757474;
@@ -120,6 +134,8 @@
     transition: 0.2s; /*this is how fast the shadow grows*/
     text-align: center;
     border-radius: 5px;
+    padding: 5px;
+
   }
   #card3:hover {
     box-shadow: 8px 10px 30px #757474;
@@ -180,6 +196,7 @@
   #footer {
     grid-area: btm;
     border-top: 2px lightskyblue dotted; 
+    
   }
   #nested {
     display: grid; 
