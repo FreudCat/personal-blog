@@ -13,10 +13,11 @@
     width: 90vw; 
     margin: auto; 
     grid-template-columns: 90vw;
-    grid-template-rows: 50vh 1fr 1fr;
+    grid-template-rows: 50vh 1fr 1fr 1fr;
     grid-template-areas: 
     "hdr"
     "content"
+    "older"
     "ftr"; 
     justify-content: center;
   }
@@ -33,17 +34,40 @@
   }
 
   #content {
-    grid-area: content; 
+    grid-area: content;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    border-bottom: 1px black solid; 
+    padding-bottom: 10vh; 
+  }
+
+  #older {
+    grid-area: older; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+
   }
 
   h1 {
     font-family: 'Mukta', sans-serif;
   }
 
+  img {
+    display: block;
+    margin: 40px auto 10px; 
+    width: 75%;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 8px #333;
+  }
+
   p,
   li, 
   h2, 
-  h3 {
+  h3, 
+  figcaption {
     font-family: 'Montserrat', sans-serif; 
   }
 
