@@ -1,0 +1,11 @@
+#footer {
+  grid-area: ftr;
+  border-top: 2px lightskyblue dotted; 
+}
+.ftr-icon-pad {
+  padding: 0 10px 30px 10px;
+  color: lightseagreen;  
+}
+.ftr-icon-pad:hover {
+  color: coral; 
+}

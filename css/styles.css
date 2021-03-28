@@ -1,4 +1,4 @@
-
+@import "./footer.css";
 
 /*small windows*/
 @media only screen and (max-width: 600px) {
@@ -10,12 +10,12 @@
     width: 95vw; 
     margin: auto;
     grid-template-columns: 90vw; /*be sure to split the width equally*/
-    grid-template-rows: 100vh 25vh 400vh 35vh; 
+    grid-template-rows: 100vh 25vh 450vh 35vh; 
     grid-template-areas: 
     "top"
     "quote"
     "nest"
-    "btm"; 
+    "ftr"; 
     justify-content: center;
   }
   #quote {
@@ -58,13 +58,6 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .ftr-icon-pad {
-    padding: 0 10px 30px 10px;
-    color: lightseagreen;  
-  }
-  .ftr-icon-pad:hover {
-    color: coral; 
-  }
 
   #header-text { 
     padding: 2px; 
@@ -88,7 +81,7 @@
     "top"
     "middle"
     "bottom";
-    margin-top: 100px; 
+    margin-top: 100px;     
   }
 .card-header{
   font-family: 'Mukta', sans-serif;
@@ -183,15 +176,6 @@
     border: 2px solid rgb(243, 202, 168); 
     color:rgb(243, 202, 168); 
   }
-  
-  #nest {
-    grid-area: nest; 
-  }
-  #footer {
-    grid-area: btm;
-    border-top: 2px lightskyblue dotted; 
-  }
-
 
 }
   
@@ -377,15 +361,5 @@ button:active {
 .hidden {
   display: none;
 }
-#footer {
-  grid-area: ftr;
-  border-top: 2px lightskyblue dotted; 
-}
-.ftr-icon-pad {
-  padding: 0 10px 30px 10px;
-  color: lightseagreen;  
-}
-.ftr-icon-pad:hover {
-  color: coral; 
-}
+
 }
