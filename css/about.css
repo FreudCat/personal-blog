@@ -1,7 +1,7 @@
-.card {
+@import "./footer.css";
 
-}
-
-.card-img-resize {
-  object-fit: contain;
+.box {
+  display: flex; 
+  align-items: center;
+  flex-direction: column;
 }

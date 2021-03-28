@@ -1,4 +1,5 @@
 @import "./footer.css";
+@import "./navbar.css";
 
 /*small windows*/
 @media only screen and (max-width: 600px) {
@@ -146,36 +147,7 @@
     align-items: center;
     flex-direction: column;
   }
-  #navbar {
-    position: fixed; 
-    overflow: hidden; 
-    width: 100vw;
-    background-color:rgb(86, 46, 179); 
-    padding: 10px 20px 10px;
-  }
-  #navbar a {
-    display: inline-flex;
-    justify-content: center;
-    padding: 5px;  
-    text-decoration: none;
-    }
-   
-  button {
-    background-color: transparent;
-    border: 2px rgb(218, 212, 212) solid;
-    border-radius: 5px; 
-    margin: 0px 5px; 
-    color: rgb(218, 212, 212); 
-    padding: 8px; 
-  }
-  button:hover {
-    border: 2px solid white; 
-    color:white;
-  }
-  button:active {
-    border: 2px solid rgb(243, 202, 168); 
-    color:rgb(243, 202, 168); 
-  }
+  
 
 }
   
@@ -253,36 +225,7 @@
   align-items: center;
   flex-direction: column;
 }
-#navbar {
-  position: fixed; 
-  overflow: hidden; 
-  width: 100vw;
-  background-color:rgb(86, 46, 179); 
-  padding: 10px 20px 10px;
-}
-#navbar a {
-  display: inline-flex;
-  justify-content: center;
-  padding: 5px;  
-  text-decoration: none;
-  }
- 
-button {
-  background-color: transparent;
-  border: 2px rgb(218, 212, 212) solid;
-  border-radius: 5px; 
-  margin: 0px 5px; 
-  color: rgb(218, 212, 212); 
-  padding: 8px; 
-}
-button:hover {
-  border: 2px solid white; 
-  color:white;
-}
-button:active {
-  border: 2px solid rgb(243, 202, 168); 
-  color:rgb(243, 202, 168); 
-}
+
 
 #cards {
   grid-area: card; 
