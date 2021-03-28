@@ -42,6 +42,20 @@ body {
     justify-content: center;
     align-items: center;
   }
+  #fav-quote {
+    grid-area: mid; 
+    display: flex;
+    border: 1px white solid; 
+    justify-content: center;
+    align-items: center;
+  }
+  #fav-city {
+    grid-area: btm; 
+    display: flex;
+    border: 1px white solid; 
+    justify-content: center;
+    align-items: center;
+  }
   
   .image {
     width: 75%;
@@ -54,6 +68,7 @@ body {
   .image-text {
     position: absolute; 
     text-align: center;
+    width: 50%; 
   }
   .image:hover {
     transition: 0.5s ease; 
