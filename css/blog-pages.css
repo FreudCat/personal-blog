@@ -13,11 +13,12 @@
     width: 90vw; 
     margin: auto; 
     grid-template-columns: 90vw;
-    grid-template-rows: 50vh 1fr 1fr 1fr;
+    grid-template-rows: 50vh auto auto auto auto; 
     grid-template-areas: 
     "hdr"
     "content"
     "older"
+    "bio"
     "ftr"; 
     justify-content: center;
   }
@@ -47,7 +48,7 @@
     display: flex; 
     flex-direction: column;
     justify-content: center;
-
+    margin-bottom: 100px; 
   }
 
   h1 {
@@ -63,6 +64,32 @@
     box-shadow: 3px 3px 8px #333;
   }
 
+  .bio-wrapper {
+    grid-area: bio; 
+    display: grid; 
+    width: 90vw;
+    height: 30vh; 
+    grid-template-columns: 38vw 40vw;  
+    grid-template-rows: 30vh;
+    grid-template-areas: 
+    "pic about";
+    justify-content: center;
+    grid-gap: 20px; 
+  }
+
+  .bio-img {
+    background-image: url(/multimedia/images/portugal.jpg);
+    background-size: contain;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+  }
+  .bio-abt {
+    grid-area: about; 
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
   p,
   li, 
   h2, 
@@ -71,7 +98,7 @@
     font-family: 'Montserrat', sans-serif; 
   }
 
-  footer {
+  #footer {
     grid-area: ftr; 
   }
 }
