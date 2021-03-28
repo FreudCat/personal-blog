@@ -10,17 +10,18 @@
     width: 95vw; 
     margin: auto;
     grid-template-columns: 90vw; /*be sure to split the width equally*/
-    grid-template-rows: 100vh 25vh 300vh 35vh; 
+    grid-template-rows: 100vh 25vh 400vh 35vh; 
     grid-template-areas: 
     "top"
     "quote"
     "nest"
     "btm"; 
-    grid-gap: 50px; 
     justify-content: center;
   }
   #quote {
     grid-area: quote;
+    font-family: 'Mukta', sans-serif;
+    margin: 50px 10px 0 10px;
   }
   #quote-card {
     border-radius: 10px;
@@ -40,6 +41,10 @@
     text-align: center;
   }
  
+  #show {
+    display: none;
+  }
+
   #header {
     text-align: center;
     font-family: 'Bangers', cursive; /*Google font*/
@@ -83,6 +88,7 @@
     "top"
     "middle"
     "bottom";
+    margin-top: 100px; 
   }
 .card-header{
   font-family: 'Mukta', sans-serif;
@@ -178,12 +184,6 @@
     color:rgb(243, 202, 168); 
   }
   
-  
-
- 
-  #about{
-    grid-area: about;
-  }
   #nest {
     grid-area: nest; 
   }
@@ -191,39 +191,30 @@
     grid-area: btm;
     border-top: 2px lightskyblue dotted; 
   }
-  #nested {
-    display: grid; 
-    grid-template-columns: 95vw; 
-    grid-template-rows: 100vh;
-    grid-gap: 10px; 
-    border: 3px purple solid; 
-    
-  }
 
-  #nested {
-    display: grid; 
-    justify-content: center;
-    border: 1px purple solid; 
-  }
 
 }
   
 
-@media (min-width: 601px) {
-#container {
-  display: grid; 
-  width: 90vw;
-  margin: auto;
-  grid-template-columns: 60vw 30vw; /*be sure to split the width equally*/
-  grid-template-rows: 100vh 100vh 60vh 45vh; 
-  grid-template-areas: 
-  "hdr hdr"
-  "card card"
-  "quote-left show-right"
-  "ftr ftr"
-  ;  
-  justify-content: center;
-}
+@media only screen and (min-width: 601px) {
+  body {
+    margin: 0; 
+  }
+
+  #container {
+    display: grid; 
+    max-width: 100%;
+    margin: auto; 
+  grid-template-columns: 65% 35%; /*be sure to split the width equally*/
+    grid-template-rows: 100vh 100vh 60vh 45vh; 
+    grid-template-areas: 
+    "hdr hdr"
+    "card card"
+    "quote-left show-right"
+    "ftr ftr"
+    ;  
+    justify-content: center;
+  }
 
 #header {
   text-align: center;
@@ -237,16 +228,21 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 #header-text { 
-  padding: 2px; 
-  margin: 0 10px; 
+  padding: 2px;  
+  margin: 50px; 
   background-color: rgba(255, 255, 255, 0.575);
   border-radius: 10px;
+  
 }
 #quote {
   grid-area: quote-left;
+  display: flex;
+  justify-content: center;
   margin-top: 80px;
+  font-family: 'Mukta', sans-serif;
 }
 #quote-card {
   border-radius: 10px;
@@ -262,6 +258,7 @@
   border-left: 2px lightskyblue dotted; 
   align-items: center;
   justify-content: center;
+  font-family: 'Mukta', sans-serif;
 }
 .center-text {
   text-align: center;
@@ -275,27 +272,48 @@
 #navbar {
   position: fixed; 
   overflow: hidden; 
+  width: 100vw;
+  background-color:rgb(86, 46, 179); 
+  padding: 10px 20px 10px;
 }
-
-
 #navbar a {
-float: left;
-display: block;
-text-align: center;
-padding: 14px;
-text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  padding: 5px;  
+  text-decoration: none;
+  }
+ 
+button {
+  background-color: transparent;
+  border: 2px rgb(218, 212, 212) solid;
+  border-radius: 5px; 
+  margin: 0px 5px; 
+  color: rgb(218, 212, 212); 
+  padding: 8px; 
+}
+button:hover {
+  border: 2px solid white; 
+  color:white;
+}
+button:active {
+  border: 2px solid rgb(243, 202, 168); 
+  color:rgb(243, 202, 168); 
 }
 
 #cards {
   grid-area: card; 
   display: grid;
+  width: 99%;
   justify-content: center;
   grid-gap: 20px; 
-  grid-template-columns: 30vw 30vw 30vw; 
-  grid-template-rows: 75vh;
+  grid-template-columns: 30vw 30vw 30vw;
+  grid-template-rows: 100vh;
+  grid-template-areas: 
+  "left mid right";
   margin-top: 100px; 
 }
 #card1 { 
+  grid-area: left;
   box-shadow: 5px 10px 20px #888888;
   transition: 0.2s; /*this is how fast the shadow grows*/
   text-align: center;
@@ -312,6 +330,7 @@ text-decoration: none;
 
 }
 #card2 {
+  grid-area: mid;
   box-shadow: 5px 10px 20px #888888;
   transition: 0.2s; /*this is how fast the shadow grows*/
   text-align: center;
@@ -328,6 +347,7 @@ text-decoration: none;
   border-radius: 5px 5px 0 0 ; 
 }
 #card3 {
+  grid-area: right;
   box-shadow: 5px 10px 20px #888888;
   transition: 0.2s; /*this is how fast the shadow grows*/
   text-align: center;
