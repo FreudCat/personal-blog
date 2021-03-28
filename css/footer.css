@@ -9,3 +9,9 @@
 .ftr-icon-pad:hover {
   color: coral; 
 }
+
+.box {
+  display: flex; 
+  align-items: center;
+  flex-direction: column;
+}
