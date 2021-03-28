@@ -4,6 +4,7 @@
   width: 100vw;
   background-color:rgb(86, 46, 179); 
   padding: 10px 20px 10px;
+  z-index: 100;
 }
 #navbar a {
   display: inline-flex;
