@@ -99,6 +99,84 @@ body {
 @media only screen and (min-width: 601px) {
   body {
     margin: 0; 
+    overflow-x: hidden;
+    background-image: linear-gradient(rgb(69, 28, 165), white); 
+  }
+
+  .container {
+    display: grid; 
+    width: 100vw;
+    margin: auto;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: 30vh 65vh 35vh;
+    grid-template-areas:
+    "hdr hdr hdr"
+    "fav-lft fav-mid fav-rt"
+    "ftr ftr ftr"; /*ftr styles imported above*/ 
+    justify-content: center;
+  }
+
+  header {
+    grid-area: hdr;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px; 
+    background: rgb(230, 230, 230); 
+    border-radius: 8px;
+    font-family: 'Bangers', cursive;
+    font-size: 1.3em; 
+  }
+ 
+  #fav-movie {
+    grid-area: fav-lft; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #fav-quote {
+    grid-area: fav-mid; 
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+  }
+  #fav-city {
+    grid-area: fav-rt; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image {
+    width: 95%;
+    height: 60%;
+    border-radius: 8px;
+    z-index: 20;
+    transition: 0.5s ease; 
+    opacity: 1; 
+  }
+  #fav-movie .image-text {
+    position: absolute; 
+    text-align: center;
+    width: 100%; 
+    font-family: 'Mukta', sans-serif;
+  }
+  #fav-quote .image-text {
+    position: absolute; 
+    text-align: center;
+    width: 25%; 
+    font-family: 'Mukta', sans-serif;
+  }
+  #fav-city .image-text {
+    position: absolute; 
+    text-align: center;
+    width: 100%; 
+    font-family: 'Mukta', sans-serif;
+  }
+  .image:hover {
+    transition: 0.5s ease; 
+    opacity: 0;
   }
 
   .box {
