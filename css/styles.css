@@ -190,7 +190,6 @@
   #footer {
     grid-area: btm;
     border-top: 2px lightskyblue dotted; 
-    
   }
   #nested {
     display: grid; 
@@ -247,6 +246,7 @@
 }
 #quote {
   grid-area: quote-left;
+  margin-top: 80px;
 }
 #quote-card {
   border-radius: 10px;
@@ -256,9 +256,12 @@
   margin: 100px; 
 }
 #show {
+  display: flex;
   grid-area: show-right; 
-  margin: 100px; 
-  border-left: 1px lightseagreen dashed; 
+  margin-top: 80px; 
+  border-left: 2px lightskyblue dotted; 
+  align-items: center;
+  justify-content: center;
 }
 .center-text {
   text-align: center;
@@ -330,7 +333,6 @@ text-decoration: none;
   text-align: center;
   border-radius: 5px;
   padding: 5px;
-
 }
 #card3:hover {
   box-shadow: 8px 10px 30px #757474;
@@ -354,5 +356,16 @@ text-decoration: none;
 }
 .hidden {
   display: none;
+}
+#footer {
+  grid-area: ftr;
+  border-top: 2px lightskyblue dotted; 
+}
+.ftr-icon-pad {
+  padding: 0 10px 30px 10px;
+  color: lightseagreen;  
+}
+.ftr-icon-pad:hover {
+  color: coral; 
 }
 }
