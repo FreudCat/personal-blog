@@ -1,21 +1,48 @@
 @import "./footer.css";
 @import "./navbar.css";
 
+html {
+  margin: 0; 
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: 'Mukta', sans-serif;
+}
+
+.center-text { 
+  text-align: center;
+}
+
+p,
+li, 
+h2, 
+h3, 
+figcaption {
+  font-family: 'Montserrat', sans-serif; 
+}
+
+#footer {
+  grid-area: ftr; 
+}
+
+
 /*small windows*/
 @media only screen and (max-width: 600px) {
-  body {
-    margin: 0;
-    overflow-x: hidden;
-  }
+ 
 
   .container { 
     display: grid; 
     width: 90vw; 
     margin: auto; 
     grid-template-columns: 90vw;
-    grid-template-rows: 50vh auto auto auto auto; 
+    grid-template-rows: 50vh auto auto auto auto auto; 
     grid-template-areas: 
     "hdr"
+    "purpose"
     "content"
     "older"
     "bio"
@@ -51,9 +78,10 @@
     margin-bottom: 100px; 
   }
 
-  h1 {
-    font-family: 'Mukta', sans-serif;
+  #purpose {
+    grid-area: purpose; 
   }
+  
 
   img {
     display: block;
@@ -89,16 +117,84 @@
     justify-content: center;
     text-align: center;
   }
+}
 
-  p,
-  li, 
-  h2, 
-  h3, 
-  figcaption {
-    font-family: 'Montserrat', sans-serif; 
+@media only screen and (min-width: 601px) {
+
+  .container {
+    display: grid;
+    width: 90vw; 
+    margin: auto;
+    grid-template-columns: 60vw 30vw;
+    grid-template-rows: 50vh 30vh auto auto;
+    grid-template-areas: 
+    "hdr hdr"
+    "info bio"
+    "mid older"
+    "ftr ftr";
+    justify-content: center;
+  }
+
+  header {
+    grid-area: hdr; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #purpose {
+    grid-area: info; 
+    display: flex;
+    width: 90%; 
+    align-items: center;
+  }
+
+  .bio-wrapper {
+    grid-area: bio; 
+    display: grid;
+    width: 100%; 
+    grid-template-columns: 50% 30%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "lft rt";
+    justify-content: center;
+    grid-gap: 10px; 
+
+  }
+#content {
+  grid-area: mid; 
+  margin-bottom: 10vh; 
+}
+
+#older {
+  grid-area: older; 
+  display: flex; 
+  padding-top: 100px;
+  flex-direction: column;
+}
+
+  .bio-img {
+    grid-area: lft; 
+    background-image: url(../multimedia/images/portugal.jpg); 
+    background-size: cover;
+    border-radius: 10px;
+  }
+  .bio-abt {
+    grid-area: rt; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   #footer {
     grid-area: ftr; 
+  }
+
+  img {
+    display: block;
+    margin: 40px auto 10px; 
+    width: 75%;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 8px #333;
   }
 }
