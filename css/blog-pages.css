@@ -19,6 +19,7 @@ h1 {
   text-align: center;
 }
 
+a,
 p,
 li,
 h2,
@@ -46,11 +47,12 @@ figcaption {
     width: 90vw;
     margin: auto;
     grid-template-columns: 90vw;
-    grid-template-rows: 50vh auto auto auto auto auto;
+    grid-template-rows: 50vh auto auto 10vh auto auto auto;
     grid-template-areas:
     "hdr"
     "purpose"
     "content"
+    "nav"
     "older"
     "bio"
     "ftr";
@@ -69,7 +71,6 @@ figcaption {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: 1px #000 solid;
     padding-bottom: 10vh;
   }
 
@@ -120,6 +121,16 @@ figcaption {
     justify-content: center;
     text-align: center;
   }
+
+  .blog-nav {
+    grid-area: nav; 
+    display: flex; 
+    width: 50%;
+    margin: auto; /*makes the width 50% of window, and margin: auto centers it*/
+    justify-content: space-between;   
+    border-bottom: 1px dotted #000;  
+    padding-bottom: 5vh; 
+  }
 }
 
 @media only screen and (min-width: 601px) {
@@ -129,11 +140,12 @@ figcaption {
     width: 90vw;
     margin: auto;
     grid-template-columns: 60vw 30vw;
-    grid-template-rows: 50vh 30vh auto auto;
+    grid-template-rows: 50vh 30vh auto 10vh auto;
     grid-template-areas:
     "hdr hdr"
     "info bio"
     "mid older"
+    "nav nav"
     "ftr ftr";
     justify-content: center;
   }
@@ -197,5 +209,13 @@ figcaption {
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 3px 3px 8px #333;
+  }
+
+  .blog-nav {
+    grid-area: nav; 
+    display: flex; 
+    width: 50%;
+    margin: auto; /*makes the width 50% of window, and margin: auto centers it*/
+    justify-content: space-between;    
   }
 }

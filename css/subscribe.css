@@ -24,7 +24,7 @@ label {
 }
 
 /*Changing navbar background color just for subscribe page*/
-#navbar {
+.navbar {
   background-color: transparent;
 }
 
