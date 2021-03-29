@@ -5,15 +5,16 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/blog-pages.css">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <!--linking to Google font for header-->
+    <!--linking to Google fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&family=Mukta&display=swap" rel="stylesheet">
     <!------------------------------------->
     <!--linking to font-awesome for icons-->
     <link href="../multimedia/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
     <!------------------------------------->
   </head>
+
   <body>
-    <nav id="navbar">
+    <nav class="navbar">
       <a href="/index.html"><button>Home</button></a>
       <a href="../blog-pages/about.html"><button>About</button></a>
       <a href="#footer"><button>Contact</button></a>
@@ -21,7 +22,7 @@
     </nav>
 
     <div class="container">
-      <header id="header">
+      <header id="header"> <!--ID for anchoring link in footer-->
         <h1 class="center-text">Pet Emergency Clinic: Flipped Classroom</h1>
       </header>
 
@@ -38,7 +39,7 @@
         </div>
       </section>
 
-      <section id="older">
+      <section class="older-posts">
         <h2 class="center-text">Older Posts</h2>
         <ul>
           <li><a href="">First Blog Post</a> - March 20th, 2004</li>
@@ -47,7 +48,7 @@
         </ul>
       </section>
 
-      <div id="content">
+      <div class="content">
         <h2><u>Deciding on a Topic</u></h2>
         <p>I decided the topic should be one that could be immediately applied, could assist in patient care, and could support the other specialties in the hospital.</p>
         <p>My audience would be licensed veterinary technicians who work in the hospital.</p>
@@ -69,7 +70,7 @@
         <p>One week prior to the lab session, I sent the following video and placement guide to the students. In the message, I explained the concept of the flipped classroom and how I expected them to be prepared for the lab session to make the most of the lab time.</p>
       </div>
 
-      <div class="box" id="footer">
+      <footer class="box" id="footer">
         <h2>Contact</h2>
         <div id="display-inline">
           <a href="https://github.com/FreudCat/personal-blog"><i class="fab fa-github-square fa-2x ftr-icon-pad"></i></a>
@@ -78,7 +79,7 @@
         </div>
         <a href="#header">Back to Top</a>
         <p><i>&copy 2021</i></p>
-      </div>
+      </footer>
 
     </div>
   </body>

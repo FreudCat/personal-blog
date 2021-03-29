@@ -67,7 +67,7 @@ figcaption {
     text-align: center;
   }
 
-  #content {
+  .content {
     grid-area: content;
     display: flex; 
     flex-direction: column; 
@@ -76,7 +76,7 @@ figcaption {
     padding-bottom: 10vh; 
   }
 
-  #older {
+  .older-posts {
     grid-area: older; 
     display: flex; 
     flex-direction: column;
@@ -169,12 +169,12 @@ figcaption {
     grid-gap: 10px; 
 
   }
-#content {
+.content {
   grid-area: mid; 
   margin-bottom: 10vh; 
 }
 
-#older {
+.older-posts {
   grid-area: older; 
   display: flex; 
   padding-top: 100px;

@@ -1,61 +1,69 @@
 @import "./footer.css";
 @import "./navbar.css";
 
+/*Style used by all viewports*/
 h1 {
   color: #175;
 }
 
-@media only screen and (max-width: 600px) {
-
-
-body {
-  margin: 0; 
-  overflow-x: hidden;
-  background-image: linear-gradient(#52b,#fff);
+.box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
+/*Styles for smaller viewports*/
+@media only screen and (max-width: 600px) {
 
-.container {
-    display: grid; 
-    max-width: 100vw;
-    margin: auto;
-    grid-template-columns: 90vw;
-    grid-template-rows: 30vh 75vh 75vh 75vh 1fr;
-    grid-template-areas:
-    "hdr"
-    "top"
-    "mid"
-    "btm"
-    "ftr"; /*ftr styles imported above*/ 
-    justify-content: center;
-    grid-gap: 20px; 
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    background-image: linear-gradient(#52b,#fff);
   }
+
+  .container {
+      display: grid;
+      max-width: 100vw;
+      margin: auto;
+      grid-template-columns: 90vw;
+      grid-template-rows: 30vh 75vh 75vh 75vh 1fr;
+      grid-template-areas:
+      "hdr"
+      "top"
+      "mid"
+      "btm"
+      "ftr"; /*ftr styles imported above*/ 
+      justify-content: center;
+      grid-gap: 20px;
+    }
 
   header {
     grid-area: hdr;
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;  
-    background: #eee; 
+    margin-top: 100px;
+    background: #eee;
     border-radius: 8px;
     font-family: 'Bangers', cursive;
   }
 
   #fav-movie {
-    grid-area: top; 
+    grid-area: top;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   #fav-quote {
-    grid-area: mid; 
-    display: flex;  
+    grid-area: mid;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
+
   #fav-city {
-    grid-area: btm; 
+    grid-area: btm;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,49 +74,35 @@ body {
     height: 60%;
     border-radius: 8px;
     z-index: 20;
-    transition: 0.5s ease; 
-    opacity: 1; 
+    transition: 0.5s ease;
+    opacity: 1;
   }
+
   .image-text {
-    position: absolute; 
+    position: absolute;
     text-align: center;
-    width: 65%; 
+    width: 65%;
     font-family: 'Mukta', sans-serif;
-    font-size: 1.3em; 
+    font-size: 1.3em;
   }
+
   .image:hover {
-    transition: 0.5s ease; 
+    transition: 0.5s ease;
     opacity: 0;
   }
-
-
-  
-
-  
-
-
-  #about-background {
-    background-color: #fff; 
-  }
-  
-  .box {
-    display: flex; 
-    align-items: center;
-    flex-direction: column;
-  }
-  
 }
 
-
+/*Styles for larger viewports*/
 @media only screen and (min-width: 601px) {
+
   body {
-    margin: 0; 
+    margin: 0;
     overflow-x: hidden;
-    background-image: linear-gradient(#41b, #fff); 
+    background-image: linear-gradient(#41b, #fff);
   }
 
   .container {
-    display: grid; 
+    display: grid;
     width: 100vw;
     margin: auto;
     grid-template-columns: 30vw 30vw 30vw;
@@ -116,37 +110,38 @@ body {
     grid-template-areas:
     "hdr hdr hdr"
     "fav-lft fav-mid fav-rt"
-    "ftr ftr ftr"; /*ftr styles imported above*/ 
+    "ftr ftr ftr"; /*ftr styles imported above*/
     justify-content: center;
   }
 
   header {
     grid-area: hdr;
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px; 
-    background: #eee; 
+    margin-top: 100px;
+    background: #eee;
     border-radius: 8px;
     font-family: 'Bangers', cursive;
-    font-size: 1.3em; 
+    font-size: 1.3em;
   }
- 
+
   #fav-movie {
-    grid-area: fav-lft; 
+    grid-area: fav-lft;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   #fav-quote {
-    grid-area: fav-mid; 
-    display: flex;  
+    grid-area: fav-mid;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
+
   #fav-city {
-    grid-area: fav-rt; 
+    grid-area: fav-rt;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,35 +152,33 @@ body {
     height: 60%;
     border-radius: 8px;
     z-index: 20;
-    transition: 0.5s ease; 
-    opacity: 1; 
-  }
-  #fav-movie .image-text {
-    position: absolute; 
-    text-align: center;
-    width: 100%; 
-    font-family: 'Mukta', sans-serif;
-  }
-  #fav-quote .image-text {
-    position: absolute; 
-    text-align: center;
-    width: 25%; 
-    font-family: 'Mukta', sans-serif;
-  }
-  #fav-city .image-text {
-    position: absolute; 
-    text-align: center;
-    width: 100%; 
-    font-family: 'Mukta', sans-serif;
-  }
-  .image:hover {
-    transition: 0.5s ease; 
-    opacity: 0;
+    transition: 0.5s ease;
+    opacity: 1;
   }
 
-  .box {
-    display: flex; 
-    align-items: center;
-    flex-direction: column;
+  #fav-movie .image-text {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: 'Mukta', sans-serif;
+  }
+
+  #fav-quote .image-text {
+    position: absolute;
+    text-align: center;
+    width: 25%;
+    font-family: 'Mukta', sans-serif;
+  }
+
+  #fav-city .image-text {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: 'Mukta', sans-serif;
+  }
+
+  .image:hover {
+    transition: 0.5s ease;
+    opacity: 0;
   }
 }
