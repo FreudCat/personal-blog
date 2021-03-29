@@ -31,7 +31,7 @@ figcaption {
 
 /*Specific to Blooms.html all sizes*/
 .taxonomy {
-  border-left: 2px purple solid; 
+  border-left: 2px #808 solid; 
   padding-left: 5px;  
   margin: 3vh 0 7vh 0; 
 }
@@ -72,7 +72,7 @@ figcaption {
     display: flex; 
     flex-direction: column; 
     justify-content: center;
-    border-bottom: 1px black solid; 
+    border-bottom: 1px #000 solid; 
     padding-bottom: 10vh; 
   }
 
@@ -94,7 +94,7 @@ figcaption {
     margin: 40px auto 10px; 
     width: 75%;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid #000;
     box-shadow: 3px 3px 8px #333;
   }
 
@@ -203,7 +203,7 @@ figcaption {
     margin: 40px auto 10px; 
     width: 75%;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid #000;
     box-shadow: 3px 3px 8px #333;
   }
 }

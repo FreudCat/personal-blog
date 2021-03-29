@@ -28,10 +28,10 @@
     border-radius: 10px;
     width: 85%; 
     padding: 20px; 
-    box-shadow: 5px 10px 8px 10px #d8d5d5;
+    box-shadow: 5px 10px 8px 10px #ddd;
   }
 #about {
-  background-color: rgb(36, 36, 36);
+  background-color: #222;
   border-radius: 10px;
 }
 
@@ -92,7 +92,7 @@
 }
   #card1 {
     grid-area: top; 
-    box-shadow: 5px 10px 20px #888888;
+    box-shadow: 5px 10px 20px #888;
     transition: 0.2s; /*this is how fast the shadow grows*/
     text-align: center;
     border-radius: 5px; 
@@ -100,7 +100,7 @@
     padding: 5px;
   }
   #card1:hover {
-    box-shadow: 8px 1px 30px #757474;
+    box-shadow: 8px 1px 30px #777;
   }
   #img1 {
     width: 100%; 
@@ -110,32 +110,31 @@
   }
   #card2 {
     grid-area: middle; 
-    box-shadow: 5px 10px 20px #888888;
+    box-shadow: 5px 10px 20px #888;
     transition: 0.2s; /*this is how fast the shadow grows*/
     text-align: center;
     border-radius: 5px;
     padding: 5px;
-
+  }
+  #card3 {
+    grid-area: bottom; 
+    box-shadow: 5px 10px 20px #888;
+    transition: 0.2s; /*this is how fast the shadow grows*/
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
   }
   #card2:hover {
-    box-shadow: 8px 10px 30px #757474;
+    box-shadow: 8px 10px 30px #777;
   }
   #img2 {
     width: 100%; 
     height: 60%;
     border-radius: 5px 5px 0 0 ; 
   }
-  #card3 {
-    grid-area: bottom; 
-    box-shadow: 5px 10px 20px #888888;
-    transition: 0.2s; /*this is how fast the shadow grows*/
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-
-  }
+  
   #card3:hover {
-    box-shadow: 8px 10px 30px #757474;
+    box-shadow: 8px 10px 30px #777;
   }
   #img3 {
     width: 100%; 
@@ -204,14 +203,14 @@
   border-radius: 10px;
   width: 85%; 
   padding: 20px; 
-  box-shadow: 5px 10px 8px 10px #d8d5d5;
+  box-shadow: 5px 10px 8px 10px #ddd;
   margin: 100px; 
 }
 #show {
   display: flex;
   grid-area: show-right; 
   margin-top: 80px; 
-  border-left: 2px lightskyblue dotted; 
+  border-left: 2px #8cf dotted; 
   align-items: center;
   justify-content: center;
   font-family: 'Mukta', sans-serif;
@@ -241,14 +240,14 @@
 }
 #card1 { 
   grid-area: left;
-  box-shadow: 5px 10px 20px #888888;
+  box-shadow: 5px 10px 20px #888;
   transition: 0.2s; /*this is how fast the shadow grows*/
   text-align: center;
   border-radius: 5px; 
   padding: 5px;
 }
 #card1:hover {
-  box-shadow: 8px 1px 30px #757474;
+  box-shadow: 8px 1px 30px #777;
 }
 #img1 {
   width: 100%; 
@@ -258,7 +257,7 @@
 }
 #card2 {
   grid-area: mid;
-  box-shadow: 5px 10px 20px #888888;
+  box-shadow: 5px 10px 20px #888;
   transition: 0.2s; /*this is how fast the shadow grows*/
   text-align: center;
   border-radius: 5px;
@@ -266,7 +265,7 @@
 
 }
 #card2:hover {
-  box-shadow: 8px 10px 30px #757474;
+  box-shadow: 8px 10px 30px #777;
 }
 #img2 {
   width: 100%; 
@@ -275,14 +274,14 @@
 }
 #card3 {
   grid-area: right;
-  box-shadow: 5px 10px 20px #888888;
+  box-shadow: 5px 10px 20px #888;
   transition: 0.2s; /*this is how fast the shadow grows*/
   text-align: center;
   border-radius: 5px;
   padding: 5px;
 }
 #card3:hover {
-  box-shadow: 8px 10px 30px #757474;
+  box-shadow: 8px 10px 30px #777;
 }
 #img3 {
   width: 100%; 
