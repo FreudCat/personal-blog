@@ -1,6 +1,10 @@
 @import "./footer.css";
 @import "./navbar.css";
 
+h1 {
+  color: #060; 
+}
+
 /*small windows*/
 @media only screen and (max-width: 600px) {
   body {
