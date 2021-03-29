@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/styles.css">
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <!--linking to Google font for header-->
+  <!--linking to Google fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&family=Mukta&display=swap" rel="stylesheet">
   <!------------------------------------->
   <!--linking to font-awesome for icons-->
@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
   <nav id="navbar">
     <a href="#header"><button>Home</button></a>
     <a href="/blog-pages/about.html"><button>About</button></a>
@@ -23,49 +22,49 @@
     <a href="/blog-pages/subscribe.html"><button>Subscribe</button></a>
   </nav>
 
-  <div id="container">
-    <div id="header">
+  <div class="container">
+    <header id="header"> <!--ID for anchoring link in footer-->
       <div id="header-text">
         <h1>Education Design Models</h1>
         <h3>Design With a Purpose</h3>
       </div>
-    </div>
+    </header>
 
     <div id="quote" class="box center-text">
-      <p id="quote-card"><q>The more that you read, the more things you will know, the more that you
-          learn, the more places you’ll go.</q> <br>
+      <p id="quote-card"><q>The more that you read, the more things you will know, the more that you learn, the more places you’ll go.</q> 
+        <br>
         <br>
         <cite>– Dr. Seuss</cite>
       </p>
     </div>
 
-    <div id="show" class="box center-text">
+    <div id="show" class="box center-text"> <!--Not shown in smaller windows-->
       <h3>This Week's Showcase</h3>
       <a href="https://med.stanford.edu/cme.html">View Stanford's continuing education catalog</a>
     </div>
 
-    <div id="cards">
+    <div id="cards"> <!--Terminology not shown in larger windows-->
       <div id="card1" class="flex-card">
-        <img src="multimedia/images/overhead-comp.jpg" id="img1" alt="overhage image of computer with user">
+        <img src="multimedia/images/overhead-comp.jpg" class="card-img" alt="overhage image of computer with user">
         <a href="blog-pages/addie.html"><h2 class="card-header">ADDIE Model</h2></a>
-        <h3 class="card-header hidden">Analysis | Design | Develop | Implement | Evaluate</h3>
+        <h3 class="card-header hide-words">Analysis | Design | Develop | Implement | Evaluate</h3>
         <p class="card-body">The five dynamic phases of building effective teaching models</p>
       </div>
       <div id="card2" class="flex-card">
-        <img src="multimedia/images/design.jpg" id="img2" atl="roses around white frame">
+        <img src="multimedia/images/design.jpg" class="card-img" atl="roses around white frame">
         <a href="blog-pages/blooms.html"><h2 class="card-header">Bloom's Taxonomy</h2></a>
-        <h3 class="card-header hidden">Remember | Understand | Apply | Analyze | Evaluate  | Create</h3>
+        <h3 class="card-header hide-words">Remember | Understand | Apply | Analyze | Evaluate  | Create</h3>
         <p class="card-body">Six classifications to incorporate into learning outcomes </p>
       </div>
       <div id="card3" class="flex-card">
-        <img src="multimedia/images/upside-down.jpg" id="img3" alt="duck in water"> 
+        <img src="multimedia/images/upside-down.jpg" class="card-img" alt="duck in water"> 
         <a href="blog-pages/flipped.html"><h2 class="card-header">Flipped Classroom</h2></a>
-        <h3 class="card-header hidden">Read | Review | Engage | Explore</h3>
+        <h3 class="card-header hide-words">Read | Review | Engage | Explore</h3>
         <p class="card-body">Turn the classroom into an interactive lab to maximize learning potential</p>
       </div>
     </div>
 
-    <div class="box" id="footer">
+    <div class="box" id="footer"> <!--Will be on all pages except subscribe page-->
       <h2>Contact</h2>
       <div id="display-inline">
         <a href="https://github.com/FreudCat/personal-blog"><i class="fab fa-github-square fa-2x ftr-icon-pad"></i></a>

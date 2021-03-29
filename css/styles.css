@@ -1,311 +1,268 @@
 @import "./footer.css";
 @import "./navbar.css";
+@import "./card-style.css";
 
-h1 {
-  color: #060; 
+/*Styles that are utilized by both media queries*/
+
+body {
+  margin: 0;
 }
 
-/*small windows*/
+h1 {
+  color: #060;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/*------------------------------------------------------------------*/
+
+/*Styles utilized by small windows*/
 @media only screen and (max-width: 600px) {
-  body {
-    margin: 0;
-  }
-  #container {
-    display: grid; 
-    width: 95vw; 
+
+  .container {
+    display: grid;
+    width: 95vw;
     margin: auto;
-    grid-template-columns: 90vw; /*be sure to split the width equally*/
-    grid-template-rows: 100vh 25vh 450vh 35vh; 
-    grid-template-areas: 
+    grid-template-columns: 90vw;
+    grid-template-rows: 100vh 25vh 450vh 35vh;
+    grid-template-areas:
     "top"
     "quote"
     "nest"
-    "ftr"; 
+    "ftr";
     justify-content: center;
   }
+
   #quote {
     grid-area: quote;
     font-family: 'Mukta', sans-serif;
     margin: 50px 10px 0 10px;
   }
+
   #quote-card {
     border-radius: 10px;
-    width: 85%; 
-    padding: 20px; 
+    width: 85%;
+    padding: 20px;
     box-shadow: 5px 10px 8px 10px #ddd;
   }
-#about {
-  background-color: #222;
-  border-radius: 10px;
-}
 
-
-
-
-  .center-text {
-    text-align: center;
-  }
- 
-  #show {
+  #show {  /*showcase info is not shown in small windows*/
     display: none;
   }
 
   #header {
     text-align: center;
     font-family: 'Bangers', cursive; /*Google font*/
-    font-size: 1.6em; 
-    padding-top: 30vh; 
-    grid-area: top; 
+    font-size: 1.6em;
+    padding-top: 30vh;
+    grid-area: top;
     background-image: url("/multimedia/images/books.jpg");
-    min-height: 100px; 
+    min-height: 100px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  #header-text { 
-    padding: 2px; 
-    margin: 0 10px; 
+  #header-text {
+    padding: 2px;
+    margin: 0 10px;
     background-color: rgba(255, 255, 255, 0.575);
     border-radius: 10px;
   }
 
   #cards {
-    grid-area: nest; 
-    display: grid; 
-    margin: auto; 
-    width: 90%; 
+    grid-area: nest;
+    display: grid;
+    margin: auto;
+    width: 90%;
     height: 100%;
     justify-content: center;
     grid-template-columns: 95%;
     grid-template-rows: 31% 31% 31%;
-    grid-gap: 30px; 
-    padding: 10px; 
+    grid-gap: 30px;
+    padding: 10px;
     grid-template-areas:
     "top"
     "middle"
     "bottom";
-    margin-top: 100px;     
+    margin-top: 100px;
   }
-.card-header{
-  font-family: 'Mukta', sans-serif;
-}
-.card-body {
-  font-family: 'Montserrat', sans-serif; 
-}
+
   #card1 {
-    grid-area: top; 
+    grid-area: top;
     box-shadow: 5px 10px 20px #888;
     transition: 0.2s; /*this is how fast the shadow grows*/
     text-align: center;
-    border-radius: 5px; 
+    border-radius: 5px;
     border-radius: 5px;
     padding: 5px;
   }
+
   #card1:hover {
     box-shadow: 8px 1px 30px #777;
   }
-  #img1 {
-    width: 100%; 
-    height: 60%;
-    border-radius: 5px 5px 0 0 ; 
 
-  }
   #card2 {
-    grid-area: middle; 
+    grid-area: middle;
     box-shadow: 5px 10px 20px #888;
     transition: 0.2s; /*this is how fast the shadow grows*/
     text-align: center;
     border-radius: 5px;
     padding: 5px;
   }
-  #card3 {
-    grid-area: bottom; 
-    box-shadow: 5px 10px 20px #888;
-    transition: 0.2s; /*this is how fast the shadow grows*/
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-  }
+
   #card2:hover {
     box-shadow: 8px 10px 30px #777;
   }
-  #img2 {
-    width: 100%; 
-    height: 60%;
-    border-radius: 5px 5px 0 0 ; 
+
+  #card3 {
+    grid-area: bottom;
+    box-shadow: 5px 10px 20px #888;
+    transition: 0.2s; /*this is how fast the shadow grows*/
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
   }
-  
+
   #card3:hover {
     box-shadow: 8px 10px 30px #777;
   }
-  #img3 {
-    width: 100%; 
-    height: 60%;
-    border-radius: 5px 5px 0 0 ; 
-  }
-  .box {
-    display: flex; 
-    align-items: center;
-    flex-direction: column;
-  }
-  
-
 }
-  
 
+/*Styles for larger viewports*/
 @media only screen and (min-width: 601px) {
-  body {
-    margin: 0; 
-  }
 
-  #container {
-    display: grid; 
+  .container {
+    display: grid;
     max-width: 100%;
-    margin: auto; 
-  grid-template-columns: 65% 35%; /*be sure to split the width equally*/
-    grid-template-rows: 100vh 100vh 60vh 45vh; 
-    grid-template-areas: 
+    margin: auto;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 100vh 100vh 60vh 45vh;
+    grid-template-areas:
     "hdr hdr"
     "card card"
     "quote-left show-right"
-    "ftr ftr"
-    ;  
+    "ftr ftr";
     justify-content: center;
   }
 
-#header {
-  text-align: center;
-  font-family: 'Bangers', cursive; /*Google font*/
-  font-size: 1.8em; 
-  padding-top: 30vh; 
-  grid-area: hdr; 
-  background-image: url("/multimedia/images/books.jpg");
-    min-height: 100px; 
+  #header {
+    text-align: center;
+    font-family: 'Bangers', cursive; /*Google font*/
+    font-size: 1.8em;
+    padding-top: 30vh;
+    grid-area: hdr;
+    background-image: url("/multimedia/images/books.jpg");
+    min-height: 100px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
     
-}
-#header-text { 
-  padding: 2px;  
-  margin: 50px; 
-  background-color: rgba(255, 255, 255, 0.575);
-  border-radius: 10px;
+  #header-text {
+    padding: 2px; 
+    margin: 50px;
+    background-color: rgba(255, 255, 255, 0.575);
+    border-radius: 10px;
+  }
+
+  #quote {
+    grid-area: quote-left;
+    display: flex;
+    margin: auto; 
+    margin-top: 50px;
+    width: 80%;
+    font-family: 'Mukta', sans-serif;
+  }
+
+  #quote-card {
+    border-radius: 10px;
+    width: 85%;
+    padding: 20px;
+    box-shadow: 5px 10px 8px 10px #ddd;
+    margin: 100px;
+  }
+
+  #show {
+    display: flex;
+    grid-area: show-right;
+    margin-top: 80px;
+    border-left: 2px #8cf dotted;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Mukta', sans-serif;
+  }
+
+  #cards {
+    grid-area: card;
+    display: grid;
+    width: 99%;
+    justify-content: center;
+    grid-gap: 20px;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: 100vh;
+    grid-template-areas:
+    "left mid right";
+    margin-top: 100px;
+  }
+
+  #card1 {
+    grid-area: left;
+    box-shadow: 5px 10px 20px #888;
+    transition: 0.2s; /*this is how fast the shadow grows*/
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  #card1:hover {
+    box-shadow: 8px 1px 30px #777;
+  }
+
+  #card2 {
+    grid-area: mid;
+    box-shadow: 5px 10px 20px #888;
+    transition: 0.2s; /*this is how fast the shadow grows*/
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  #card2:hover {
+    box-shadow: 8px 10px 30px #777;
+  }
+
+  #card3 {
+    grid-area: right;
+    box-shadow: 5px 10px 20px #888;
+    transition: 0.2s; /*this is how fast the shadow grows*/
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  #card3:hover {
+    box-shadow: 8px 10px 30px #777;
+  }
+
+  .flex-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+  }
   
-}
-#quote {
-  grid-area: quote-left;
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
-  font-family: 'Mukta', sans-serif;
-}
-#quote-card {
-  border-radius: 10px;
-  width: 85%; 
-  padding: 20px; 
-  box-shadow: 5px 10px 8px 10px #ddd;
-  margin: 100px; 
-}
-#show {
-  display: flex;
-  grid-area: show-right; 
-  margin-top: 80px; 
-  border-left: 2px #8cf dotted; 
-  align-items: center;
-  justify-content: center;
-  font-family: 'Mukta', sans-serif;
-}
-.center-text {
-  text-align: center;
-}
-
-.box {
-  display: flex; 
-  align-items: center;
-  flex-direction: column;
-}
-
-
-#cards {
-  grid-area: card; 
-  display: grid;
-  width: 99%;
-  justify-content: center;
-  grid-gap: 20px; 
-  grid-template-columns: 30vw 30vw 30vw;
-  grid-template-rows: 100vh;
-  grid-template-areas: 
-  "left mid right";
-  margin-top: 100px; 
-}
-#card1 { 
-  grid-area: left;
-  box-shadow: 5px 10px 20px #888;
-  transition: 0.2s; /*this is how fast the shadow grows*/
-  text-align: center;
-  border-radius: 5px; 
-  padding: 5px;
-}
-#card1:hover {
-  box-shadow: 8px 1px 30px #777;
-}
-#img1 {
-  width: 100%; 
-  height: 60%;
-  border-radius: 5px 5px 0 0 ; 
-
-}
-#card2 {
-  grid-area: mid;
-  box-shadow: 5px 10px 20px #888;
-  transition: 0.2s; /*this is how fast the shadow grows*/
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px;
-
-}
-#card2:hover {
-  box-shadow: 8px 10px 30px #777;
-}
-#img2 {
-  width: 100%; 
-  height: 60%;
-  border-radius: 5px 5px 0 0 ; 
-}
-#card3 {
-  grid-area: right;
-  box-shadow: 5px 10px 20px #888;
-  transition: 0.2s; /*this is how fast the shadow grows*/
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px;
-}
-#card3:hover {
-  box-shadow: 8px 10px 30px #777;
-}
-#img3 {
-  width: 100%; 
-  height: 60%;
-  border-radius: 5px 5px 0 0 ; 
-}
-.flex-card {
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-  height: 80vh; 
-}
-.card-header{
-  font-family: 'Mukta', sans-serif;
-}
-.card-body {
-  font-family: 'Montserrat', sans-serif; 
-}
-.hidden {
-  display: none;
-}
-
+  /*hides the terminology in large views*/
+  .hide-words {
+    display: none;
+  }
 }
