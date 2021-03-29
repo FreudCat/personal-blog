@@ -1,5 +1,5 @@
 @import "./footer.css";
-@import "./navbar.css";
+@import "./navbar.css"; 
 
 html {
   margin: 0; 
@@ -29,6 +29,12 @@ figcaption {
   grid-area: ftr; 
 }
 
+/*Specific to Blooms.html all sizes*/
+.taxonomy {
+  border-left: 2px purple solid; 
+  padding-left: 5px;  
+  margin: 3vh 0 7vh 0; 
+}
 
 /*small windows*/
 @media only screen and (max-width: 600px) {
@@ -117,6 +123,9 @@ figcaption {
     justify-content: center;
     text-align: center;
   }
+
+  
+
 }
 
 @media only screen and (min-width: 601px) {
