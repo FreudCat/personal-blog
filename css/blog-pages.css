@@ -39,7 +39,7 @@ figcaption {
   margin: 3vh 0 7vh 0;
 }
 
-/*small windows*/
+/*Styles for small windows*/
 @media only screen and (max-width: 600px) {
 
   .container {
