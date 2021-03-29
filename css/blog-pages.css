@@ -1,9 +1,11 @@
 @import "./footer.css";
-@import "./navbar.css"; 
+@import "./navbar.css";
 
+/*Styles used by all viewports*/
 html {
-  margin: 0; 
+  margin: 0;
 }
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -13,85 +15,79 @@ h1 {
   font-family: 'Mukta', sans-serif;
 }
 
-.center-text { 
+.center-text {
   text-align: center;
 }
 
 p,
-li, 
-h2, 
-h3, 
+li,
+h2,
+h3,
 figcaption {
-  font-family: 'Montserrat', sans-serif; 
+  font-family: 'Montserrat', sans-serif;
 }
 
 #footer {
-  grid-area: ftr; 
+  grid-area: ftr;
 }
 
-/*Specific to Blooms.html all sizes*/
+/*Style pecific to Blooms.html*/
 .taxonomy {
-  border-left: 2px #808 solid; 
-  padding-left: 5px;  
-  margin: 3vh 0 7vh 0; 
+  border-left: 2px #808 solid;
+  padding-left: 5px;
+  margin: 3vh 0 7vh 0;
 }
 
 /*small windows*/
 @media only screen and (max-width: 600px) {
- 
 
-  .container { 
-    display: grid; 
-    width: 90vw; 
-    margin: auto; 
+  .container {
+    display: grid;
+    width: 90vw;
+    margin: auto;
     grid-template-columns: 90vw;
-    grid-template-rows: 50vh auto auto auto auto auto; 
-    grid-template-areas: 
+    grid-template-rows: 50vh auto auto auto auto auto;
+    grid-template-areas:
     "hdr"
     "purpose"
     "content"
     "older"
     "bio"
-    "ftr"; 
+    "ftr";
     justify-content: center;
   }
 
   header {
-    grid-area: hdr; 
-    display: flex; 
+    grid-area: hdr;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .center-text { 
-    text-align: center;
-  }
-
   .content {
     grid-area: content;
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    border-bottom: 1px #000 solid; 
-    padding-bottom: 10vh; 
+    border-bottom: 1px #000 solid;
+    padding-bottom: 10vh;
   }
 
   .older-posts {
-    grid-area: older; 
-    display: flex; 
+    grid-area: older;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 100px; 
+    margin-bottom: 100px;
   }
 
   #purpose {
-    grid-area: purpose; 
+    grid-area: purpose;
   }
   
-
   img {
     display: block;
-    margin: 40px auto 10px; 
+    margin: 40px auto 10px;
     width: 75%;
     border-radius: 10px;
     border: 1px solid #000;
@@ -99,16 +95,16 @@ figcaption {
   }
 
   .bio-wrapper {
-    grid-area: bio; 
-    display: grid; 
+    grid-area: bio;
+    display: grid;
     width: 90vw;
-    height: 30vh; 
-    grid-template-columns: 38vw 40vw;  
+    height: 30vh;
+    grid-template-columns: 38vw 40vw;
     grid-template-rows: 30vh;
-    grid-template-areas: 
+    grid-template-areas:
     "pic about";
     justify-content: center;
-    grid-gap: 20px; 
+    grid-gap: 20px;
   }
 
   .bio-img {
@@ -117,26 +113,24 @@ figcaption {
     border-radius: 10px;
     background-repeat: no-repeat;
   }
+
   .bio-abt {
-    grid-area: about; 
+    grid-area: about;
     flex-direction: column;
     justify-content: center;
     text-align: center;
   }
-
-  
-
 }
 
 @media only screen and (min-width: 601px) {
 
   .container {
     display: grid;
-    width: 90vw; 
+    width: 90vw;
     margin: auto;
     grid-template-columns: 60vw 30vw;
     grid-template-rows: 50vh 30vh auto auto;
-    grid-template-areas: 
+    grid-template-areas:
     "hdr hdr"
     "info bio"
     "mid older"
@@ -145,62 +139,60 @@ figcaption {
   }
 
   header {
-    grid-area: hdr; 
+    grid-area: hdr;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   #purpose {
-    grid-area: info; 
+    grid-area: info;
     display: flex;
-    width: 90%; 
+    width: 90%;
     align-items: center;
   }
 
   .bio-wrapper {
-    grid-area: bio; 
+    grid-area: bio;
     display: grid;
-    width: 100%; 
+    width: 100%;
     grid-template-columns: 50% 30%;
     grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
     "lft rt";
     justify-content: center;
-    grid-gap: 10px; 
-
+    grid-gap: 10px;
   }
-.content {
-  grid-area: mid; 
-  margin-bottom: 10vh; 
-}
 
-.older-posts {
-  grid-area: older; 
-  display: flex; 
-  padding-top: 100px;
-  flex-direction: column;
-}
+  .content {
+    grid-area: mid;
+    margin-bottom: 10vh;
+  }
+
+  .older-posts {
+    grid-area: older;
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+  }
 
   .bio-img {
-    grid-area: lft; 
-    background-image: url(../multimedia/images/portugal.jpg); 
+    grid-area: lft;
+    background-image: url(../multimedia/images/portugal.jpg);
     background-size: cover;
     border-radius: 10px;
   }
+
   .bio-abt {
-    grid-area: rt; 
+    grid-area: rt;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  #footer {
-    grid-area: ftr; 
-  }
-
   img {
     display: block;
-    margin: 40px auto 10px; 
+    margin: 40px auto 10px;
     width: 75%;
     border-radius: 10px;
     border: 1px solid #000;

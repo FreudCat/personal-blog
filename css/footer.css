@@ -1,17 +1,19 @@
 #footer {
   grid-area: ftr;
-  border-top: 2px #8cf dotted; 
+  border-top: 2px #8cf dotted;
 }
+
 .ftr-icon-pad {
   padding: 0 10px 30px 10px;
-  color: #2aa  
+  color: #2aa
 }
+
 .ftr-icon-pad:hover {
-  color: #f75; 
+  color: #f75;
 }
 
 .box {
-  display: flex; 
+  display: flex;
   align-items: center;
   flex-direction: column;
 }
