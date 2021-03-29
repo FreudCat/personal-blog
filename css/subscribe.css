@@ -10,8 +10,7 @@ body {
 }
 
 p,
-h2,
-label {
+h2 {
   color: #ddd;
   text-align: center;
 }
@@ -33,35 +32,32 @@ label {
   border-radius: 10px;
   box-shadow: 0 15px 25px #000;
   padding: 10px;
+  width: 25vw; 
 }
 
 .user-input {
   position: relative;
-  width: 25vw;
   padding: 10px 0 0 0;
   font-size: 1.2em;
   color: #fff;
   margin-bottom: 30px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #fff; 
 }
 
-.user-input:focus {
-  border: none;
+.no-focus:focus {  /*removing the border when the input areas are in focus*/
+  outline: none; 
 }
 
 input {
   background: transparent;
   border: none;
-  color: #fff;
+  color: #fff; 
 }
 
-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: 0.5s;
+@media only screen and (max-width: 600px) {  /*Changing size to improve aesthetics of box in small windows */
+  
+  .subscribe-box {
+    width: 50vw; 
+  }
+
 }
